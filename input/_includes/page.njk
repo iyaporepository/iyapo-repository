@@ -174,17 +174,6 @@ landing: false
                   {% elseif block.type=='group' %}
                   <div class="block group">
                     {{ content_loop(block.value.items) }}
-                    {# {% for p in block.value.items %}
-                      {% if p.type == 'image' %}
-                        <div class="block image-wrapper">
-                          {{ macros.page_img(p.value,rootpath) }}
-                        </div>
-                      {% else %}
-                        <div class="block">
-                          {{ p.value | md | safe }}
-                        </div>
-                      {% endif %}
-                    {% endfor %} #}
                   </div>
                   {% elseif block.type=='list' %}
                   <div class="block list">
