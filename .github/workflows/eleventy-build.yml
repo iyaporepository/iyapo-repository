@@ -29,3 +29,4 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTION_DEPLOY_KEY }}
           publish_dir: ./_site
+          cname: iyaporepository.org
