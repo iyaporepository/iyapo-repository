@@ -30,7 +30,7 @@
     <!-- favicon -->
     
     <script>
-      console.log({"item_id":"a8e5e957-19c4-4350-b935-50a0d0bdf9e9","properties":{"manuscript_description":{"type":"rich_text","value":[{"type":"text","text":{"content":"An immersive VR experience that transports you to a world of music.  Any type of music that soothes you: rock, classical, alternative, etc.  In a dystopian world, you need to escape.  Rather than turning to drugs, you escape to this music world.  This also changes color depending on the music tone.","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"An immersive VR experience that transports you to a world of music.  Any type of music that soothes you: rock, classical, alternative, etc.  In a dystopian world, you need to escape.  Rather than turning to drugs, you escape to this music world.  This also changes color depending on the music tone.","href":null}]},"manuscript_id":{"type":"number","value":226},"narrative":{"type":"select","value":"Dystopian"},"object":{"type":"select","value":"Changes Color"},"domain":{"type":"select","value":"Music"},"scan":{"type":"files","value":[{"type":"image","name":"scan"}]},"comments":{"type":"rich_text","value":[]},"manuscript_name":{"type":"title","value":"Saima"}},"dir":"assets/images_for_web/archive/manuscript226"})
+      console.log({"item_id":"a8e5e957-19c4-4350-b935-50a0d0bdf9e9","properties":{"manuscript_description":{"type":"rich_text","value":[{"type":"text","text":{"content":"An immersive VR experience that transports you to a world of music.  Any type of music that soothes you: rock, classical, alternative, etc.  In a dystopian world, you need to escape.  Rather than turning to drugs, you escape to this music world.  This also changes color depending on the music tone.","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"An immersive VR experience that transports you to a world of music.  Any type of music that soothes you: rock, classical, alternative, etc.  In a dystopian world, you need to escape.  Rather than turning to drugs, you escape to this music world.  This also changes color depending on the music tone.","href":null}]},"manuscript_id":{"type":"number","value":226},"narrative":{"type":"select","value":"Dystopian"},"object":{"type":"select","value":"Changes Color"},"domain":{"type":"select","value":"Music"},"scan":{"type":"files","value":[{"type":"image","media_label":"img","name":"scan"}]},"comments":{"type":"rich_text","value":[]},"manuscript_name":{"type":"title","value":"Saima"}},"dir":"assets/images_for_web/archive/manuscript226"})
       console.log([{"type":"text","label":"Name","value":"Saima"},{"type":"tags","value":{"narrative":"Dystopian","domain":"Music","object":"Changes Color"}},{"type":"accordion","label":"Description","value":"<p>An immersive VR experience that transports you to a world of music.  Any type of music that soothes you: rock, classical, alternative, etc.  In a dystopian world, you need to escape.  Rather than turning to drugs, you escape to this music world.  This also changes color depending on the music tone.</p>"}])
       
       window.addEventListener('load',img_listeners);
@@ -61,7 +61,7 @@
     
   
 
-  <body  data-theme="soft-black">
+  <body  data-theme="soft-black" class="archive-internal">
     <div class='constellation-content grid' data-cluster="manuscripts">
       
 <nav class="breadcrumbs mono small-caps">
@@ -86,9 +86,17 @@
   
       
   <section class='props'>
+    <div id="close">
+        <a  href="../"><svg viewBox="0 0 100 100" width="20" height="20">
+                <line x1="0" y1="0" x2="100" y2="100" vector-effect="non-scaling-stroke"></line>
+                <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke"></line>
+        </svg></a>
+      </div> 
+        
         <div class="prop desktop-only mono">
             <p class='value'>#0226</p>
-          </div>
+        </div>
+        
         
           
           <div class="prop mono" data-type="text">

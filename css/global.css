@@ -109,7 +109,11 @@ body[data-theme='grey'] .col-domain{
 
 
 
-
+.relative-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-gap:0px var(--spacing);
+}
 
 
 body{
@@ -333,7 +337,7 @@ a[target="_blank"]{
         opacity:1;
     }
 
-    .card:hover .id-no{
+    .card:hover .identifier{
         z-index:92;
     }
 
@@ -358,6 +362,63 @@ a[target="_blank"]{
     letter-spacing:0.05em;
 }
 
+#close{
+    /* padding:var(--spacing);
+    padding-bottom:0; */
+    width:100%;
+    display:none;
+    flex-flow:row nowrap;
+    justify-content:flex-end;
+    box-sizing: border-box;
+    padding-top:var(--spacing);
+    padding-bottom:var(--spacing);
+}
+
+
+/* position:fixed;
+    right:0;
+    top:0; */
+
+#close svg{
+    width:20px;
+    height:20px;
+}
+
+#close line{
+    stroke:var(--fg);
+    stroke-width:var(--stroke-width);
+}
+
+input[type="text"],input[type="email"],textarea{
+    background-color: #2E2E2E;
+    outline:none;
+    border:none;
+    color:var(--hl);
+    padding:6px 6px;
+    box-sizing:border-box;
+}
+
+
+input[type="text"],input[type="email"]{
+    height:30px;
+    max-height:30px;
+    
+    
+}
+
+
+form{
+    display:flex;
+    flex-flow:column nowrap;
+}
+
+form input,form textarea{
+    width:100%;
+    max-width:100%;
+    min-width:100%;
+    margin-bottom:10px;
+}
+
 @media(min-width:600px){
     :root{
         --col-count:12;
@@ -374,10 +435,14 @@ a[target="_blank"]{
     }
 }
 
-@media(min-width:700px){
-    .mobile-only{
+@media(max-width:799px){
+    body.archive-internal .desktop-only{
         display:none !important;
     }
+}
+
+@media(min-width:700px){
+    
 
     .mono{
         font-size:16px;
@@ -391,14 +456,40 @@ a[target="_blank"]{
 }
 
 @media(min-width:800px){
+    .mobile-only{
+        display:none !important;
+    }
+    
+    :root{
+        --spacing:20px;
+        --nav-height:80px;
+    }
+    
     .breadcrumbs{
         display:none;
+    }
+
+    #close{
+        display:flex;
     }
 }
 
 @media(min-width:840px){
     :root{
         --logo-height:75px;
+    }
+}
+
+@media(min-width:1340px){
+    #close{
+        position:fixed;
+        right:var(--spacing);
+        top:0;
+        pointer-events:none;
+    }
+
+    #close a{
+        pointer-events:all;
     }
 }
 

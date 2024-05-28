@@ -31,7 +31,7 @@
     <!-- favicon -->
     
     <script>
-      console.log({"item_id":"34f0b415-c47b-4ebb-b011-6ebff89fed6d","properties":{"manuscript_id":{"type":"number","value":12},"thumbnail":{"type":"files","value":[]},"media":{"type":"files","value":[{"type":"image","name":"artifact12-1"},{"type":"image","name":"4"},{"type":"embed","url":"https://player.vimeo.com/video/945963318"},{"type":"image","name":"IMG_9268"},{"type":"image","name":"Copy-of-IMG_9282"}]},"artifact_description":{"type":"rich_text","value":[]},"comments":{"type":"rich_text","value":[]},"artifact_subid":{"type":"number","value":1},"artifact_name":{"type":"title","value":"Water Suit"}}})
+      console.log({"item_id":"34f0b415-c47b-4ebb-b011-6ebff89fed6d","properties":{"manuscript_id":{"type":"number","value":12},"thumbnail":{"type":"files","value":[]},"media":{"type":"files","value":[{"type":"image","media_label":"img","name":"artifact12-1"},{"type":"image","media_label":"img","name":"4"},{"type":"embed","url":"https://player.vimeo.com/video/945963318","media_label":"link"},{"type":"image","media_label":"img","name":"IMG_9268"},{"type":"image","media_label":"img","name":"Copy-of-IMG_9282"}]},"artifact_description":{"type":"rich_text","value":[]},"is_rare_media_access_point":{"type":"checkbox","value":false},"comments":{"type":"rich_text","value":[]},"artifact_subid":{"type":"number","value":1},"artifact_name":{"type":"title","value":"Water Suit"}}})
       console.log([{"type":"text","label":"Name","value":"Water Suit"},{"type":"relatives","label":"Ancestor Manuscript","value":[{"orientation":"vertical","url":"archive/manuscripts-cluster/manuscript-12","image":"assets/images_for_web/archive/manuscript12/scan@@sm"}]}])
       
       window.addEventListener('load',img_listeners);
@@ -62,7 +62,7 @@
     
   
 
-  <body  data-theme="soft-black">
+  <body  data-theme="soft-black" class="archive-internal">
     <div class='constellation-content grid' data-cluster="artifacts">
       
 <nav class="breadcrumbs mono small-caps">
@@ -100,7 +100,6 @@
                 <iframe src="https://player.vimeo.com/video/945963318" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
               </div>
               <script src="https://player.vimeo.com/api/player.js"></script>
-                
               
             </figure>
           
@@ -130,9 +129,17 @@
   
       
   <section class='props'>
+    <div id="close">
+        <a  href="../"><svg viewBox="0 0 100 100" width="20" height="20">
+                <line x1="0" y1="0" x2="100" y2="100" vector-effect="non-scaling-stroke"></line>
+                <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke"></line>
+        </svg></a>
+      </div> 
+        
         <div class="prop desktop-only mono">
             <p class='value'>#0012:01</p>
-          </div>
+        </div>
+        
         
           
           <div class="prop mono" data-type="text">

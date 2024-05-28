@@ -13,16 +13,47 @@ let tags_selected={
 let n_selected=0;
 let card_container;
 let cards;
+let search_field;
+
+let search_val='';
+let radio_val='';
 
 
 function init(){
-    
+    search_field=document.querySelector('#search-field');
+    if(search_field){
+        search_field.addEventListener('input',(e)=>{
+            search_val=e.currentTarget.value.toLowerCase();
+            filter_cards();
+        })
+    }
+    radio_checkboxes=Array.from(document.querySelectorAll('.category-select input'));
+    for(let checkbox of radio_checkboxes){
+        checkbox.addEventListener('change',(e)=>{
+            for(let box of radio_checkboxes){
+                if(box.value!==checkbox.value) box.checked=false;
+                
+            }
+            if(checkbox.checked) radio_val=checkbox.value;
+            else radio_val='';
+            card_container.classList.toggle('filtering',radio_val.length>0);
+            for(let media_item of Array.from(document.querySelectorAll('.item'))){
+
+                media_item.classList.toggle('in-filter',media_item.dataset.category == radio_val);
+            }
+
+        })
+    }
+
+    tag_boxes= Array.from(document.querySelectorAll('#filter input[type="checkbox"]'));
+    tags_selected_box=document.querySelector('.selected-tags');
+    filter_box=document.querySelector('#filter');
+    card_container=document.querySelector('#cards');
+    cards=Array.from(document.querySelectorAll('.card'));
+
+
     if(cluster=='manuscripts'){
-        tag_boxes= Array.from(document.querySelectorAll('#filter input[type="checkbox"]'));
-        tags_selected_box=document.querySelector('.selected-tags');
-        filter_box=document.querySelector('#filter');
-        card_container=document.querySelector('#cards');
-        cards=Array.from(document.querySelectorAll('.card'));
+        
 
 
         let resize_observer=new ResizeObserver(function(){
@@ -36,6 +67,8 @@ function init(){
             checkbox.addEventListener('change',evaluate_tags)
         })
     }
+
+    target_blank();
 }
 
 function evaluate_tags(){
@@ -43,7 +76,7 @@ function evaluate_tags(){
     filter_box.dataset.selected=checked_boxes.length;
     n_selected=checked_boxes.length
     // tags_selected_box.innerHTML='';
-    card_container.classList.toggle('filtering',n_selected>0);
+    
     tags_selected={
         narrative:[],
         object:[],
@@ -82,18 +115,32 @@ function remove_tag(e){
     evaluate_tags();
 }
 
+
+
+
 function filter_cards(){
+    card_container.classList.toggle('filtering',n_selected>0||search_val.length>0);
+    console.log(search_val,tags_selected)
     for(let card of cards){
         let narrative=card.dataset.narrative;
         let object=card.dataset.object;
         let domain=card.dataset.domain;
         card.classList.toggle('in-filter',
-            n_selected==0
+            (n_selected==0&&search_val.length==0)
             || (
-               (tags_selected.narrative.length==0 || tags_selected.narrative.includes(narrative))
+                (search_val.length==0 || card.dataset.name.toLowerCase().includes(search_val) || card.dataset.id.toLowerCase().includes(search_val))
+                && (tags_selected.narrative.length==0 || tags_selected.narrative.includes(narrative))
                 && (tags_selected.object.length==0 || tags_selected.object.includes(object))
                 && (tags_selected.domain.length==0 || tags_selected.domain.includes(domain))
             )
         )
     }
+}
+
+function target_blank(){
+    document.querySelectorAll('a').forEach(link=>{
+        if(link.host!==window.location.host){
+            link.setAttribute('target', '_blank');
+        }
+    })
 }

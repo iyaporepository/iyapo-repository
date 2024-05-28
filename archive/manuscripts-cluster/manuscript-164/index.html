@@ -30,7 +30,7 @@
     <!-- favicon -->
     
     <script>
-      console.log({"item_id":"902fe729-2e49-448a-8a48-115925f5e652","properties":{"manuscript_description":{"type":"rich_text","value":[{"type":"text","text":{"content":"This future object is supposed to protect you in the apocalyptic time.  It is a tube that you can either shoot fire from or hit them with it.  It will hurt them because the tube is made of steel.","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"This future object is supposed to protect you in the apocalyptic time.  It is a tube that you can either shoot fire from or hit them with it.  It will hurt them because the tube is made of steel.","href":null}]},"manuscript_id":{"type":"number","value":164},"narrative":{"type":"select","value":"Apocalyptic"},"object":{"type":"select","value":"Tube"},"domain":{"type":"select","value":"Security"},"scan":{"type":"files","value":[{"type":"image","name":"scan"}]},"comments":{"type":"rich_text","value":[]},"manuscript_name":{"type":"title","value":"Osvaldo Rojano"}},"dir":"assets/images_for_web/archive/manuscript164"})
+      console.log({"item_id":"902fe729-2e49-448a-8a48-115925f5e652","properties":{"manuscript_description":{"type":"rich_text","value":[{"type":"text","text":{"content":"This future object is supposed to protect you in the apocalyptic time.  It is a tube that you can either shoot fire from or hit them with it.  It will hurt them because the tube is made of steel.","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"This future object is supposed to protect you in the apocalyptic time.  It is a tube that you can either shoot fire from or hit them with it.  It will hurt them because the tube is made of steel.","href":null}]},"manuscript_id":{"type":"number","value":164},"narrative":{"type":"select","value":"Apocalyptic"},"object":{"type":"select","value":"Tube"},"domain":{"type":"select","value":"Security"},"scan":{"type":"files","value":[{"type":"image","media_label":"img","name":"scan"}]},"comments":{"type":"rich_text","value":[]},"manuscript_name":{"type":"title","value":"Osvaldo Rojano"}},"dir":"assets/images_for_web/archive/manuscript164"})
       console.log([{"type":"text","label":"Name","value":"Osvaldo Rojano"},{"type":"tags","value":{"narrative":"Apocalyptic","domain":"Security","object":"Tube"}},{"type":"accordion","label":"Description","value":"<p>This future object is supposed to protect you in the apocalyptic time.  It is a tube that you can either shoot fire from or hit them with it.  It will hurt them because the tube is made of steel.</p>"}])
       
       window.addEventListener('load',img_listeners);
@@ -61,7 +61,7 @@
     
   
 
-  <body  data-theme="soft-black">
+  <body  data-theme="soft-black" class="archive-internal">
     <div class='constellation-content grid' data-cluster="manuscripts">
       
 <nav class="breadcrumbs mono small-caps">
@@ -86,9 +86,17 @@
   
       
   <section class='props'>
+    <div id="close">
+        <a  href="../"><svg viewBox="0 0 100 100" width="20" height="20">
+                <line x1="0" y1="0" x2="100" y2="100" vector-effect="non-scaling-stroke"></line>
+                <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke"></line>
+        </svg></a>
+      </div> 
+        
         <div class="prop desktop-only mono">
             <p class='value'>#0164</p>
-          </div>
+        </div>
+        
         
           
           <div class="prop mono" data-type="text">

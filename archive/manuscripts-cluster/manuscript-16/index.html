@@ -30,7 +30,7 @@
     <!-- favicon -->
     
     <script>
-      console.log({"item_id":"fb30962c-f3c8-44e2-a142-7228c05f7a77","properties":{"manuscript_description":{"type":"rich_text","value":[{"type":"text","text":{"content":"Robo Chino","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"Robo Chino","href":null}]},"manuscript_id":{"type":"number","value":16},"narrative":{"type":"select","value":""},"object":{"type":"select","value":""},"domain":{"type":"select","value":""},"scan":{"type":"files","value":[{"type":"image","name":"scan"}]},"comments":{"type":"rich_text","value":[]},"manuscript_name":{"type":"title","value":""}},"dir":"assets/images_for_web/archive/manuscript16"})
+      console.log({"item_id":"fb30962c-f3c8-44e2-a142-7228c05f7a77","properties":{"manuscript_description":{"type":"rich_text","value":[{"type":"text","text":{"content":"Robo Chino","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"Robo Chino","href":null}]},"manuscript_id":{"type":"number","value":16},"narrative":{"type":"select","value":""},"object":{"type":"select","value":""},"domain":{"type":"select","value":""},"scan":{"type":"files","value":[{"type":"image","media_label":"img","name":"scan"}]},"comments":{"type":"rich_text","value":[]},"manuscript_name":{"type":"title","value":""}},"dir":"assets/images_for_web/archive/manuscript16"})
       console.log([{"type":"accordion","label":"Description","value":"<p>Robo Chino</p>"}])
       
       window.addEventListener('load',img_listeners);
@@ -61,7 +61,7 @@
     
   
 
-  <body  data-theme="soft-black">
+  <body  data-theme="soft-black" class="archive-internal">
     <div class='constellation-content grid' data-cluster="manuscripts">
       
 <nav class="breadcrumbs mono small-caps">
@@ -86,9 +86,17 @@
   
       
   <section class='props'>
+    <div id="close">
+        <a  href="../"><svg viewBox="0 0 100 100" width="20" height="20">
+                <line x1="0" y1="0" x2="100" y2="100" vector-effect="non-scaling-stroke"></line>
+                <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke"></line>
+        </svg></a>
+      </div> 
+        
         <div class="prop desktop-only mono">
             <p class='value'>#0016</p>
-          </div>
+        </div>
+        
         
           
           <div class="prop mono" data-type="accordion">

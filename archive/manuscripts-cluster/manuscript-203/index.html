@@ -30,7 +30,7 @@
     <!-- favicon -->
     
     <script>
-      console.log({"item_id":"e62db0b8-4339-4624-8983-906d6e47a217","properties":{"manuscript_description":{"type":"rich_text","value":[{"type":"text","text":{"content":"Guitar that senses when something is about to happen around and shoots out when someone is in danger.","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"Guitar that senses when something is about to happen around and shoots out when someone is in danger.","href":null}]},"manuscript_id":{"type":"number","value":203},"narrative":{"type":"select","value":"Apocalyptic"},"object":{"type":"select","value":"Makes Sound"},"domain":{"type":"select","value":"Music"},"scan":{"type":"files","value":[{"type":"image","name":"scan"}]},"comments":{"type":"rich_text","value":[]},"manuscript_name":{"type":"title","value":"Maysam Buhail"}},"dir":"assets/images_for_web/archive/manuscript203"})
+      console.log({"item_id":"e62db0b8-4339-4624-8983-906d6e47a217","properties":{"manuscript_description":{"type":"rich_text","value":[{"type":"text","text":{"content":"Guitar that senses when something is about to happen around and shoots out when someone is in danger.","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"Guitar that senses when something is about to happen around and shoots out when someone is in danger.","href":null}]},"manuscript_id":{"type":"number","value":203},"narrative":{"type":"select","value":"Apocalyptic"},"object":{"type":"select","value":"Makes Sound"},"domain":{"type":"select","value":"Music"},"scan":{"type":"files","value":[{"type":"image","media_label":"img","name":"scan"}]},"comments":{"type":"rich_text","value":[]},"manuscript_name":{"type":"title","value":"Maysam Buhail"}},"dir":"assets/images_for_web/archive/manuscript203"})
       console.log([{"type":"text","label":"Name","value":"Maysam Buhail"},{"type":"tags","value":{"narrative":"Apocalyptic","domain":"Music","object":"Makes Sound"}},{"type":"accordion","label":"Description","value":"<p>Guitar that senses when something is about to happen around and shoots out when someone is in danger.</p>"}])
       
       window.addEventListener('load',img_listeners);
@@ -61,7 +61,7 @@
     
   
 
-  <body  data-theme="soft-black">
+  <body  data-theme="soft-black" class="archive-internal">
     <div class='constellation-content grid' data-cluster="manuscripts">
       
 <nav class="breadcrumbs mono small-caps">
@@ -86,9 +86,17 @@
   
       
   <section class='props'>
+    <div id="close">
+        <a  href="../"><svg viewBox="0 0 100 100" width="20" height="20">
+                <line x1="0" y1="0" x2="100" y2="100" vector-effect="non-scaling-stroke"></line>
+                <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke"></line>
+        </svg></a>
+      </div> 
+        
         <div class="prop desktop-only mono">
             <p class='value'>#0203</p>
-          </div>
+        </div>
+        
         
           
           <div class="prop mono" data-type="text">

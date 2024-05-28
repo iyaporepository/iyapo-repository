@@ -31,7 +31,7 @@
     <!-- favicon -->
     
     <script>
-      console.log({"item_id":"09449329-a634-4db2-8931-7195bc07e48e","properties":{"manuscript_id":{"type":"number","value":25},"thumbnail":{"type":"files","value":[{"type":"image","name":"test-thumb"}]},"media":{"type":"files","value":[{"type":"embed","url":"https://player.vimeo.com/video/945880386"}]},"artifact_description":{"type":"rich_text","value":[]},"comments":{"type":"rich_text","value":[]},"artifact_subid":{"type":"number","value":2},"artifact_name":{"type":"title","value":"Khemo"}}})
+      console.log({"item_id":"09449329-a634-4db2-8931-7195bc07e48e","properties":{"manuscript_id":{"type":"number","value":25},"thumbnail":{"type":"files","value":[{"type":"image","media_label":"img","name":"test-thumb"}]},"media":{"type":"files","value":[{"type":"embed","url":"https://player.vimeo.com/video/945880386","media_label":"link"}]},"artifact_description":{"type":"rich_text","value":[]},"is_rare_media_access_point":{"type":"checkbox","value":false},"comments":{"type":"rich_text","value":[]},"artifact_subid":{"type":"number","value":2},"artifact_name":{"type":"title","value":"Khemo"}}})
       console.log([{"type":"text","label":"Name","value":"Khemo"},{"type":"relatives","label":"Ancestor Manuscript","value":[{"orientation":"vertical","url":"archive/manuscripts-cluster/manuscript-25","image":"assets/images_for_web/archive/manuscript25/scan@@sm"}]}])
       
       window.addEventListener('load',img_listeners);
@@ -62,7 +62,7 @@
     
   
 
-  <body  data-theme="soft-black">
+  <body  data-theme="soft-black" class="archive-internal">
     <div class='constellation-content grid' data-cluster="artifacts">
       
 <nav class="breadcrumbs mono small-caps">
@@ -78,7 +78,6 @@
                 <iframe src="https://player.vimeo.com/video/945880386" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
               </div>
               <script src="https://player.vimeo.com/api/player.js"></script>
-                
               
             </figure>
           
@@ -86,9 +85,17 @@
   
       
   <section class='props'>
+    <div id="close">
+        <a  href="../"><svg viewBox="0 0 100 100" width="20" height="20">
+                <line x1="0" y1="0" x2="100" y2="100" vector-effect="non-scaling-stroke"></line>
+                <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke"></line>
+        </svg></a>
+      </div> 
+        
         <div class="prop desktop-only mono">
             <p class='value'>#0025:02</p>
-          </div>
+        </div>
+        
         
           
           <div class="prop mono" data-type="text">

@@ -31,7 +31,7 @@
     <!-- favicon -->
     
     <script>
-      console.log({"item_id":"81ba2a73-561a-4b72-8711-613c6472e8f6","properties":{"manuscript_id":{"type":"number","value":53},"thumbnail":{"type":"files","value":[]},"media":{"type":"files","value":[{"type":"image","name":"image25"}]},"artifact_description":{"type":"rich_text","value":[]},"comments":{"type":"rich_text","value":[]},"artifact_subid":{"type":"number","value":1},"artifact_name":{"type":"title","value":"Seed Necklace"}}})
+      console.log({"item_id":"81ba2a73-561a-4b72-8711-613c6472e8f6","properties":{"manuscript_id":{"type":"number","value":53},"thumbnail":{"type":"files","value":[]},"media":{"type":"files","value":[{"type":"image","media_label":"img","name":"image25"}]},"artifact_description":{"type":"rich_text","value":[]},"is_rare_media_access_point":{"type":"checkbox","value":false},"comments":{"type":"rich_text","value":[]},"artifact_subid":{"type":"number","value":1},"artifact_name":{"type":"title","value":"Seed Necklace"}}})
       console.log([{"type":"text","label":"Name","value":"Seed Necklace"},{"type":"relatives","label":"Ancestor Manuscript","value":[{"orientation":"vertical","url":"archive/manuscripts-cluster/manuscript-53","image":"assets/images_for_web/archive/manuscript53/scan@@sm"}]}])
       
       window.addEventListener('load',img_listeners);
@@ -62,7 +62,7 @@
     
   
 
-  <body  data-theme="soft-black">
+  <body  data-theme="soft-black" class="archive-internal">
     <div class='constellation-content grid' data-cluster="artifacts">
       
 <nav class="breadcrumbs mono small-caps">
@@ -87,9 +87,17 @@
   
       
   <section class='props'>
+    <div id="close">
+        <a  href="../"><svg viewBox="0 0 100 100" width="20" height="20">
+                <line x1="0" y1="0" x2="100" y2="100" vector-effect="non-scaling-stroke"></line>
+                <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke"></line>
+        </svg></a>
+      </div> 
+        
         <div class="prop desktop-only mono">
             <p class='value'>#0053:01</p>
-          </div>
+        </div>
+        
         
           
           <div class="prop mono" data-type="text">

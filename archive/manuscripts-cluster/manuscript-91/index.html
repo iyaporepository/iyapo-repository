@@ -30,7 +30,7 @@
     <!-- favicon -->
     
     <script>
-      console.log({"item_id":"2fdf4e41-9417-4242-9443-4f92203fed68","properties":{"manuscript_description":{"type":"rich_text","value":[]},"manuscript_id":{"type":"number","value":91},"narrative":{"type":"select","value":"Revolutionary"},"object":{"type":"select","value":"Transmits Data"},"domain":{"type":"select","value":"Environment"},"scan":{"type":"files","value":[{"type":"image","name":"scan"}]},"comments":{"type":"rich_text","value":[]},"manuscript_name":{"type":"title","value":""}},"dir":"assets/images_for_web/archive/manuscript91"})
+      console.log({"item_id":"2fdf4e41-9417-4242-9443-4f92203fed68","properties":{"manuscript_description":{"type":"rich_text","value":[]},"manuscript_id":{"type":"number","value":91},"narrative":{"type":"select","value":"Revolutionary"},"object":{"type":"select","value":"Transmits Data"},"domain":{"type":"select","value":"Environment"},"scan":{"type":"files","value":[{"type":"image","media_label":"img","name":"scan"}]},"comments":{"type":"rich_text","value":[]},"manuscript_name":{"type":"title","value":""}},"dir":"assets/images_for_web/archive/manuscript91"})
       console.log([{"type":"tags","value":{"narrative":"Revolutionary","domain":"Environment","object":"Transmits Data"}},{"type":"relatives","label":"Descendant Artifacts","value":[{"orientation":"landscape","url":"archive/artifacts-cluster/artifact-91-1","image":"assets/images_for_web/archive/manuscript91/artifact1/img@@Untitled-4@@sm"}]}])
       
       window.addEventListener('load',img_listeners);
@@ -61,7 +61,7 @@
     
   
 
-  <body  data-theme="soft-black">
+  <body  data-theme="soft-black" class="archive-internal">
     <div class='constellation-content grid' data-cluster="manuscripts">
       
 <nav class="breadcrumbs mono small-caps">
@@ -86,9 +86,17 @@
   
       
   <section class='props'>
+    <div id="close">
+        <a  href="../"><svg viewBox="0 0 100 100" width="20" height="20">
+                <line x1="0" y1="0" x2="100" y2="100" vector-effect="non-scaling-stroke"></line>
+                <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke"></line>
+        </svg></a>
+      </div> 
+        
         <div class="prop desktop-only mono">
             <p class='value'>#0091</p>
-          </div>
+        </div>
+        
         
           
           <div class="prop mono" data-type="tags">

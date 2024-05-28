@@ -31,7 +31,7 @@
     <!-- favicon -->
     
     <script>
-      console.log({"item_id":"e2ad450e-c5f8-413e-b99b-6741418e7708","properties":{"manuscript_id":{"type":"number","value":222},"thumbnail":{"type":"files","value":[]},"media":{"type":"files","value":[{"type":"image","name":"AWC-Lab15"},{"type":"image","name":"0H8A9089"},{"type":"image","name":"image9"}]},"artifact_description":{"type":"rich_text","value":[{"type":"text","text":{"content":"speakers","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"speakers","href":null}]},"comments":{"type":"rich_text","value":[]},"artifact_subid":{"type":"number","value":1},"artifact_name":{"type":"title","value":"Music Plants"}}})
+      console.log({"item_id":"e2ad450e-c5f8-413e-b99b-6741418e7708","properties":{"manuscript_id":{"type":"number","value":222},"thumbnail":{"type":"files","value":[]},"media":{"type":"files","value":[{"type":"image","media_label":"img","name":"AWC-Lab15"},{"type":"image","media_label":"img","name":"0H8A9089"},{"type":"image","media_label":"img","name":"image9"}]},"artifact_description":{"type":"rich_text","value":[{"type":"text","text":{"content":"speakers","link":null},"annotations":{"bold":false,"italic":false,"strikethrough":false,"underline":false,"code":false,"color":"default"},"plain_text":"speakers","href":null}]},"is_rare_media_access_point":{"type":"checkbox","value":false},"comments":{"type":"rich_text","value":[]},"artifact_subid":{"type":"number","value":1},"artifact_name":{"type":"title","value":"Music Plants"}}})
       console.log([{"type":"text","label":"Name","value":"Music Plants"},{"type":"accordion","label":"Description","value":"<p>speakers</p>"},{"type":"relatives","label":"Ancestor Manuscript","value":[{"orientation":"vertical","url":"archive/manuscripts-cluster/manuscript-222","image":"assets/images_for_web/archive/manuscript222/scan@@sm"}]}])
       
       window.addEventListener('load',img_listeners);
@@ -62,7 +62,7 @@
     
   
 
-  <body  data-theme="soft-black">
+  <body  data-theme="soft-black" class="archive-internal">
     <div class='constellation-content grid' data-cluster="artifacts">
       
 <nav class="breadcrumbs mono small-caps">
@@ -109,9 +109,17 @@
   
       
   <section class='props'>
+    <div id="close">
+        <a  href="../"><svg viewBox="0 0 100 100" width="20" height="20">
+                <line x1="0" y1="0" x2="100" y2="100" vector-effect="non-scaling-stroke"></line>
+                <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke"></line>
+        </svg></a>
+      </div> 
+        
         <div class="prop desktop-only mono">
             <p class='value'>#0222:01</p>
-          </div>
+        </div>
+        
         
           
           <div class="prop mono" data-type="text">

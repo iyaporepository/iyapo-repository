@@ -30,12 +30,59 @@
     }
 }
 
-.embed-wrapper{
+.embed-wrapper,.attachment-wrapper{
     border:1px solid var(--mid);
     box-sizing:border-box;
     aspect-ratio:16/9;
     width:100%;
 }
+
+.attachment-wrapper{
+    aspect-ratio:8.5/11;
+}
+
+#close{
+    position:fixed;
+    right:var(--spacing);
+    top:0;
+    pointer-events:none;
+    z-index:200;
+}
+
+#close a{
+    pointer-events:all;
+}
+
+/* #close{
+    padding-top:0;
+    padding-bottom:8px;
+} */
+
+/* #close{
+    position:absolute;
+    top:8px;
+    left:0;
+} */
+
+/* #close a{
+    pointer-events:all;
+    
+    
+    padding-left:8px;
+    padding-bottom:8px;
+
+    box-sizing:border-box;
+    display:flex;
+    flex-flow:row nowrap;
+} */
+
+/* .grid[data-cluster="manuscripts"] #close a{
+    padding-top:8px;
+}
+
+.grid:not(.grid[data-cluster="manuscripts"]) #close a{
+    background-color: var(--bg);
+} */
 
 .prop{
     display:flex;
@@ -101,11 +148,7 @@ details[open]{
     content:':';
 }
 
-.relative-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    grid-gap:0px 15px;
-}
+
 
 .constellation-content section:last-of-type{
     padding-top:10px;
@@ -116,6 +159,10 @@ details[open]{
     display:block;
     width:100%;
     min-height:20px;
+}
+
+.props{
+    position:relative;
 }
 
 @media(min-width:800px){
@@ -131,7 +178,7 @@ details[open]{
         height:var(--hundredvh);
         max-height:var(--hundredvh);
         overflow-y:auto;
-        padding-top:20px;
+        padding-top:calc(var(--spacing) * 2 + 20px);
     }
 
     .constellation-content section::after{
@@ -140,9 +187,6 @@ details[open]{
         width:100%;
         min-height:20px;
     }
-}
-
-@media(min-width:900px){
 
     .grid:not(.grid[data-cluster="manuscripts"]) .props{
         order:1;
@@ -151,6 +195,11 @@ details[open]{
     .grid:not(.grid[data-cluster="manuscripts"]) .media{
         order:2;
     }
+}
+
+@media(min-width:900px){
+
+    
 
     .prop[data-type="tags"]:not(.empty){
         display:flex;
@@ -164,4 +213,17 @@ details[open]{
         flex:1;
         min-height:52px;
     }
+}
+
+@media(min-width:1340px){
+    /* #close,.grid:not(.grid[data-cluster="manuscripts"]) #close{
+        padding-top:var(--spacing);
+        justify-content:flex-end;
+    } */
+
+    .constellation-content section,
+    .constellation-content section:last-of-type{
+        padding-top:var(--spacing);
+    }
+
 }

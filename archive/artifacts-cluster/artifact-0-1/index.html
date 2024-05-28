@@ -31,7 +31,7 @@
     <!-- favicon -->
     
     <script>
-      console.log({"item_id":"719dfaf4-7ed0-415f-a0ec-3cb16726dbde","properties":{"manuscript_id":{"type":"number","value":0},"thumbnail":{"type":"files","value":[]},"media":{"type":"files","value":[{"type":"image","name":"image1"},{"type":"image","name":"_DSC2679"},{"type":"image","name":"ToScale_(c)MagaliDuzant_Artist-SalomeAsega-AyoOkunseinde_3"}]},"artifact_description":{"type":"rich_text","value":[]},"comments":{"type":"rich_text","value":[]},"artifact_subid":{"type":"number","value":1},"artifact_name":{"type":"title","value":"Manuscript Holder"}}})
+      console.log({"item_id":"719dfaf4-7ed0-415f-a0ec-3cb16726dbde","properties":{"manuscript_id":{"type":"number","value":0},"thumbnail":{"type":"files","value":[]},"media":{"type":"files","value":[{"type":"image","media_label":"img","name":"image1"},{"type":"image","media_label":"img","name":"_DSC2679"},{"type":"image","media_label":"img","name":"ToScale_(c)MagaliDuzant_Artist-SalomeAsega-AyoOkunseinde_3"}]},"artifact_description":{"type":"rich_text","value":[]},"is_rare_media_access_point":{"type":"checkbox","value":false},"comments":{"type":"rich_text","value":[]},"artifact_subid":{"type":"number","value":1},"artifact_name":{"type":"title","value":"Manuscript Holder"}}})
       console.log([{"type":"text","label":"Name","value":"Manuscript Holder"},{"type":"relatives","label":"Ancestor Manuscript","value":[{"orientation":"vertical","url":"archive/manuscripts-cluster/manuscript-0","image":"assets/images_for_web/archive/manuscript0/scan@@sm"}]}])
       
       window.addEventListener('load',img_listeners);
@@ -62,7 +62,7 @@
     
   
 
-  <body  data-theme="soft-black">
+  <body  data-theme="soft-black" class="archive-internal">
     <div class='constellation-content grid' data-cluster="artifacts">
       
 <nav class="breadcrumbs mono small-caps">
@@ -109,9 +109,17 @@
   
       
   <section class='props'>
+    <div id="close">
+        <a  href="../"><svg viewBox="0 0 100 100" width="20" height="20">
+                <line x1="0" y1="0" x2="100" y2="100" vector-effect="non-scaling-stroke"></line>
+                <line x1="0" y1="100" x2="100" y2="0" vector-effect="non-scaling-stroke"></line>
+        </svg></a>
+      </div> 
+        
         <div class="prop desktop-only mono">
             <p class='value'>#0000:01</p>
-          </div>
+        </div>
+        
         
           
           <div class="prop mono" data-type="text">
