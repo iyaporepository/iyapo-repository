@@ -17,11 +17,14 @@
     
 
     <style>
-      body::before{
+      body{
         background-color:var(--bg);
+        
+      }
+
+      .empty{
         min-height:var(--hundredvh);
         width:100%;
-        content:'';
         display:block;
       }
     </style>
@@ -34,7 +37,7 @@
   </head>
 
   <body data-theme="{{theme.value}}">
-
+    <div class="empty"></div>
   
   </body>
 </html>
