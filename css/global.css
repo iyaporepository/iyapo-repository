@@ -412,6 +412,10 @@ form{
     flex-flow:column nowrap;
 }
 
+form button[type="submit"]:disabled{
+    color:var(--mid);
+}
+
 form input,form textarea{
     width:100%;
     max-width:100%;
