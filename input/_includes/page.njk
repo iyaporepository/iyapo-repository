@@ -40,7 +40,7 @@ landing: false
         <nav id="page-nav">
           {# {% set page0 = sheet[0] %} #}
           <div class='page-link-wrapper'>
-            <a href="/" id="mobile-logo" class='bevel-mask expand-link'>
+            <a href="{{ "BASE_URL" | env }}" id="mobile-logo" class='bevel-mask expand-link'>
               {{macros.bevel_box("left right bottom top",["br","bl","tr","tl"]) }}
               <svg width="94" height="26">
                 <use href="#small-logo-path" />
