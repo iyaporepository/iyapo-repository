@@ -81,7 +81,7 @@ module.exports = function (eleventyConfig) {
         props=[
           {type:'text',label:'Name',value:item.properties.manuscript_name.value},
           {type:'tags',value:
-          item.properties.narrative.value&&item.properties.domain.value&&item.properties.object.value?{
+          item.properties.narrative.value||item.properties.domain.value||item.properties.object.value?{
             narrative: item.properties.narrative.value,
             domain: item.properties.domain.value,
             object: item.properties.object.value
