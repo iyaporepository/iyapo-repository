@@ -184,15 +184,29 @@ landing: false
                   {% elseif block.type=='form' %}
                     {% if block.value.options[0] =='contact' %}
                     <div class="block">
-                      <form action="https://script.google.com/macros/s/AKfycbwfmIRhTTwncxbRDdMAKyXbUfG6hyFNtA-ucac0JU0FOjHwoGreLWZ2rzCzMDNesZQr/exec" method="POST">
+                      <form id="contact-form" action="" method="POST">
                         <input class="mono" name="Name" type="text" placeholder="Name"></input>
                         <input class="mono" name="Email" type="email" placeholder="Email"></input>
                         <input class="mono" name="Subject" type="text" placeholder="Subject"></input>
                         <textarea class="mono" name="Message"  placeholder="Message"></textarea>
                         <button type="submit">Submit</button>
-                        {# <input class="mono" type="text" placeholder="message"></input> #}
                       </form>
                     </div>
+                    <script>
+                      let form_url="https://script.google.com/macros/s/AKfycbwfmIRhTTwncxbRDdMAKyXbUfG6hyFNtA-ucac0JU0FOjHwoGreLWZ2rzCzMDNesZQr/exec"
+                      let contact_form=document.querySelector('#contact-form');
+                      contact_form.addEventListener('submit', (e) => {
+                        contact_form.querySelector('button[type="submit"]').disabled = true
+                        e.preventDefault()
+                        let requestBody = new FormData(contact_form)
+                        fetch(form_url, { method: 'POST', body: requestBody})
+                          .then(response => {
+                              alert('Submitted! Thank you for getting in touch.', response)
+                              contact_form.querySelector('button[type="submit"]').disabled = false
+                              for(let input of Array.from(contact_form.querySelectorAll('textarea,input'))) input.value='';
+                            })
+                      })
+                    </script>
                     
                     {% endif %}
                   {% elseif block.type=='diptych' %}
