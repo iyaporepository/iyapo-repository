@@ -389,16 +389,34 @@ a[target="_blank"]{
     stroke-width:var(--stroke-width);
 }
 
-
-input[type="text"]{
-    height:24px;
-    max-height:24px;
+input[type="text"],input[type="email"],textarea{
     background-color: #2E2E2E;
     outline:none;
     border:none;
     color:var(--hl);
-    padding:6px 4px;
+    padding:6px 6px;
     box-sizing:border-box;
+}
+
+
+input[type="text"],input[type="email"]{
+    height:30px;
+    max-height:30px;
+    
+    
+}
+
+
+form{
+    display:flex;
+    flex-flow:column nowrap;
+}
+
+form input,form textarea{
+    width:100%;
+    max-width:100%;
+    min-width:100%;
+    margin-bottom:10px;
 }
 
 @media(min-width:600px){

@@ -14,10 +14,11 @@
 {% for li in items %}
 <li>
      {# | replace("- "," ") | md | safe #}
-    {{li.value.text | replace("- ","") | md | safe  }}
+    <div>{{li.value.text | replace("- ","") | md | safe  }}
     <ul>
         {{ list_items(li.value.items) }}
     </ul>
+    </div>
     
 </li>
 {% endfor %}

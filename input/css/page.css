@@ -728,12 +728,12 @@ body[data-view="galaxy"] .mousemoved #aperture-dom{
     box-sizing:border-box;
 }
 
-.prose .block li p{
+.prose .block li{
     display:flex;
     flex-flow:row nowrap;
 }
 
-.prose .block li p::before{
+.prose .block li::before{
     content:'-';
     margin-right:10px;
 }

@@ -101,7 +101,7 @@ async function fetch_parse_block_content(block_id){
                 items=await fetch_parse_block_content(block.id)
             }
 
-            let valid_custom_types=['gallery','diptych','group'];
+            let valid_custom_types=['gallery','diptych','group','form'];
 
             let config=block.callout.rich_text[0]?.plain_text?.toLowerCase()?.split(':')?.map(a=>a.trim()) || []
             let type=config[0];
@@ -131,8 +131,10 @@ async function fetch_parse_block_content(block_id){
             if(block.has_children){
                 await delay(500);
 
-                list_item.value.items=await fetch_parse_block_content(block.id);
-                // list_item.value.items=
+                // list_item.value.items=await fetch_parse_block_content(block.id);
+                
+                let ul=await fetch_parse_block_content(block.id)
+                if(ul) list_item.value.items=ul[0].value.items
             } 
 
             if(content.at(-1)?.type=='list') content.at(-1).value.items.push(list_item)

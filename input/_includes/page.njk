@@ -146,76 +146,96 @@ landing: false
             {% else %}
               {% set pagetext = homepage_content.mdcontent %}
             {% endif %}
-            {% for block in pagetext %}
-              
-                {% if block.type=='image' %}
-                  <div class="block image-wrapper">
-                    {{ macros.page_img(block.value,rootpath) }}
-                  </div>
-                {% elseif block.type=='gallery' %}
-                  <div class="block gallery {{ block.value.options | join(' ') }}" data-length="{{block.value.items.length}}">
-                    <div class="item-wrapper">
-                      {% for item in block.value.items %}
-                      {% if item.type == 'image' %}
-                        <div class="slide {{active if loop.index0 == 0 }}" data-i="{{loop.index0}}">
-                          {{ macros.page_img(item.value,rootpath) }}
-                        </div>
+
+            {% macro content_loop(blocks) %}
+              {% for block in blocks %}
+                
+                  {% if block.type=='image' %}
+                    <div class="block image-wrapper">
+                      {{ macros.page_img(block.value,rootpath) }}
+                    </div>
+                  {% elseif block.type=='gallery' %}
+                    <div class="block gallery {{ block.value.options | join(' ') }}" data-length="{{block.value.items.length}}">
+                      <div class="item-wrapper">
+                        {% for item in block.value.items %}
+                        {% if item.type == 'image' %}
+                          <div class="slide {{active if loop.index0 == 0 }}" data-i="{{loop.index0}}">
+                            {{ macros.page_img(item.value,rootpath) }}
+                          </div>
+                        {% endif %}
+                      {% endfor %}
+                      </div>
+                      {% if  'carousel' in block.value.options%}
+                      <button class="previous mono">&lt;</button>
+                      <button class="next mono">&gt;</button>
                       {% endif %}
-                    {% endfor %}
+                      
                     </div>
-                    {% if block.value.options == 'carousel' %}
-                    <button class="previous mono">&lt;</button>
-                    <button class="next mono">&gt;</button>
-                    {% endif %}
-                    
-                  </div>
-                {% elseif block.type=='group' %}
-                <div class="block group">
-                  {% for p in block.value.items %}
-                    {% if p.type == 'image' %}
-                      <div class="block image-wrapper">
-                        {{ macros.page_img(p.value,rootpath) }}
-                      </div>
-                    {% else %}
-                      <div class="block">
-                        {{ p.value | md | safe }}
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-                {% elseif block.type=='list' %}
-                <div class="block list">
-                  <ul>
-                    {{ macros.list_items(block.value.items) }}
-                  </ul>
-                </div>
-                {# <div class="block" style="min-height:1px;"></div> #}
-                  
-                {% elseif block.type=='diptych' %}
-                  <div class="diptych block {{ block.value.options | join }}">
-                    <div class="side">
-                      {{ macros.page_img(block.value.items[0].value,rootpath) }}
-                    </div>
-                    <div class="side">
-                      {% for p in block.value.items %}
-                        {% if loop.index0 !== 0 %}
+                  {% elseif block.type=='group' %}
+                  <div class="block group">
+                    {{ content_loop(block.value.items) }}
+                    {# {% for p in block.value.items %}
+                      {% if p.type == 'image' %}
+                        <div class="block image-wrapper">
+                          {{ macros.page_img(p.value,rootpath) }}
+                        </div>
+                      {% else %}
                         <div class="block">
                           {{ p.value | md | safe }}
                         </div>
-                        {% endif %}
-                      {% endfor %}
+                      {% endif %}
+                    {% endfor %} #}
+                  </div>
+                  {% elseif block.type=='list' %}
+                  <div class="block list">
+                    <ul>
+                      {{ macros.list_items(block.value.items) }}
+                    </ul>
+                  </div>
+                  {# <div class="block" style="min-height:1px;"></div> #}
+                  {% elseif block.type=='form' %}
+                    {% if block.value.options[0] =='contact' %}
+                    <div class="block">
+                      <form action="https://script.google.com/macros/s/AKfycbwfmIRhTTwncxbRDdMAKyXbUfG6hyFNtA-ucac0JU0FOjHwoGreLWZ2rzCzMDNesZQr/exec" method="POST">
+                        <input class="mono" name="Name" type="text" placeholder="Name"></input>
+                        <input class="mono" name="Email" type="email" placeholder="Email"></input>
+                        <input class="mono" name="Subject" type="text" placeholder="Subject"></input>
+                        <textarea class="mono" name="Message"  placeholder="Message"></textarea>
+                        <button type="submit">Submit</button>
+                        {# <input class="mono" type="text" placeholder="message"></input> #}
+                      </form>
                     </div>
                     
-                  </div>
-                {% else %}
-                  
-                  <div class='block {{"anchor-heading" if block.type=='heading_2'}}' {% if block.type=='heading_2'%} id="jump-to-{{block.value | replace('##','') | slugify}}" {% endif %}>
-                    {{ block.value | md | safe }}
-                  </div>
+                    {% endif %}
+                  {% elseif block.type=='diptych' %}
+                    <div class="diptych block {{ block.value.options | join(' ') }}">
+                      <div class="side">
+                        {{ macros.page_img(block.value.items[0].value,rootpath) }}
+                      </div>
+                      <div class="side">
+                        {% for p in block.value.items %}
+                          {% if loop.index0 !== 0 %}
+                          <div class="block">
+                            {{ p.value | md | safe }}
+                          </div>
+                          {% endif %}
+                        {% endfor %}
+                      </div>
                       
-                {% endif %}
-              
-            {% endfor %}
+                    </div>
+                  {% else %}
+                    
+                    <div class='block {{"anchor-heading" if block.type=='heading_2'}}' {% if block.type=='heading_2'%} id="jump-to-{{block.value | replace('##','') | slugify}}" {% endif %}>
+                      {{ block.value | md | safe }}
+                    </div>
+                        
+                  {% endif %}
+                
+              {% endfor %}
+            {% endmacro %}
+
+            {{ content_loop(pagetext) }}
+            
           </section>
           
           
