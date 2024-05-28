@@ -189,7 +189,6 @@ async function fetch_database(database_id,{sort_prop,include_content=false,archi
 
 
     results=results.map(a=>{
-        // console.log(a.properties);
         let properties={};
         let manuscript_id=a?.properties?.manuscript_id?.number;
         let artifact_subid=a?.properties?.artifact_subid?.number;
