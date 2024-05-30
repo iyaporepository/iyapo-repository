@@ -170,6 +170,7 @@ module.exports = function (eleventyConfig) {
       });
 
     eleventyConfig.addPassthroughCopy("assets");
+    eleventyConfig.addPassthroughCopy("custom");
     eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 
     eleventyConfig.setTemplateFormats("html,css,js,njk,otf,woff,woff2,md");

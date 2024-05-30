@@ -49,6 +49,7 @@ body[data-theme='bow']{
     
     --stroke-width:1px;
     --border:var(--stroke-width) solid var(--fg);
+    background-color:var(--bg);
 }
 
 body[data-theme='grey']{
@@ -396,6 +397,7 @@ input[type="text"],input[type="email"],textarea{
     color:var(--hl);
     padding:6px 6px;
     box-sizing:border-box;
+    border-radius:0;
 }
 
 
