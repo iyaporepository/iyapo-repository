@@ -7,3 +7,4 @@ gh-pages.pub
 .env
 .cache
 nico-notes.md
+.DS_Store
