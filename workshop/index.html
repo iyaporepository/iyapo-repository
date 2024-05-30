@@ -18,7 +18,7 @@
     
     <script>
       let is_landing=false;
-      let archive_clusters=[{"name":"manuscripts","single":"manuscript","pos":{"x":0.65,"y":0.2}},{"name":"artifacts","single":"artifact","pos":{"x":0.2,"y":0.45}},{"name":"moving images","single":"moving-image","pos":{"x":0.8,"y":0.6}},{"name":"rare media","pos":{"x":0.4,"y":0.8}}];
+      let archive_clusters=[{"name":"manuscripts","single":"manuscript","pos":{"x":0.65,"y":0.2},"mobile_pos":{"x":0.7,"y":0.2}},{"name":"artifacts","single":"artifact","pos":{"x":0.2,"y":0.45},"mobile_pos":{"x":0.25,"y":0.4}},{"name":"moving images","single":"moving-image","pos":{"x":0.8,"y":0.6},"mobile_pos":{"x":0.75,"y":0.55}},{"name":"rare media","pos":{"x":0.4,"y":0.8},"mobile_pos":{"x":0.45,"y":0.83}}];
       let base_url="/";
     </script>
     <script type="module" src="../js/d3.js" charset="utf-8" preload></script>
@@ -310,7 +310,7 @@
           <nav id="cluster-nav">
             
               <a class='mono' 
-              style="--x:0.65; --y:0.2;"  
+              style="--x:0.65; --y:0.2; --mobile-x:0.7; --mobile-y:0.2;"  
               target="portal" 
               data-i="0" 
               data-name="manuscripts" 
@@ -318,7 +318,7 @@
               </a>
             
               <a class='mono' 
-              style="--x:0.2; --y:0.45;"  
+              style="--x:0.2; --y:0.45; --mobile-x:0.25; --mobile-y:0.4;"  
               target="portal" 
               data-i="1" 
               data-name="artifacts" 
@@ -326,7 +326,7 @@
               </a>
             
               <a class='mono' 
-              style="--x:0.8; --y:0.6;"  
+              style="--x:0.8; --y:0.6; --mobile-x:0.75; --mobile-y:0.55;"  
               target="portal" 
               data-i="2" 
               data-name="moving images" 
@@ -334,7 +334,7 @@
               </a>
             
               <a class='mono' 
-              style="--x:0.4; --y:0.8;"  
+              style="--x:0.4; --y:0.8; --mobile-x:0.45; --mobile-y:0.83;"  
               target="portal" 
               data-i="3" 
               data-name="rare media" 
