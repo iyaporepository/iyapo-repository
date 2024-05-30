@@ -96,15 +96,19 @@ async function fetch_parse_block_content(block_id){
             })
         }else if(block.type=='callout'){
             let items=[];
-            if(block.has_children){
-                await delay(500);
-                items=await fetch_parse_block_content(block.id)
-            }
-
-            let valid_custom_types=['gallery','diptych','group','form'];
+            
+            
+            let valid_custom_types=['gallery','diptych','group','form','toc'];
 
             let config=block.callout.rich_text[0]?.plain_text?.toLowerCase()?.split(':')?.map(a=>a.trim()) || []
             let type=config[0];
+            if(block.has_children){
+                await delay(500);
+                items=await fetch_parse_block_content(block.id)
+                
+            }
+
+
             if(config.length==1&&type=='gallery') config.push('regular')
             if(valid_custom_types.includes(type)) item={
                 type,

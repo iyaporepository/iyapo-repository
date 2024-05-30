@@ -209,6 +209,10 @@ landing: false
                     </script>
                     
                     {% endif %}
+                  {% elseif block.type=='toc' %}
+                  <div class="block t-o-c">
+                    {{ block.value.items[0].value | md | safe }}
+                  </div>
                   {% elseif block.type=='diptych' %}
                     <div class="diptych block {{ block.value.options | join(' ') }}">
                       <div class="side">
@@ -227,7 +231,7 @@ landing: false
                     </div>
                   {% else %}
                     
-                    <div class='block {{"anchor-heading" if block.type=='heading_2'}}' {% if block.type=='heading_2'%} id="jump-to-{{block.value | replace('##','') | slugify}}" {% endif %}>
+                    <div data-blocktype="{{block.type}}" class='block {{"anchor-heading" if block.type=='heading_2'}}' {% if block.type=='heading_2'%} id="jump-to-{{block.value | replace('##','') | slugify}}" {% endif %}>
                       {{ block.value | md | safe }}
                     </div>
                         
