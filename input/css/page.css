@@ -14,7 +14,7 @@ body.landing{
 }
 
 h1{
-    font-size:min(8.8vw,36px);
+    font-size:min(9vw,36px);
     font-family:'VTC DuBois Wide';
     font-weight:200;
     text-transform:uppercase;
@@ -321,8 +321,8 @@ body[data-view="galaxy"] #cluster-nav{
     white-space:nowrap;
 
     position:absolute;
-    left:calc(100% * var(--x));
-    top:calc(100% * var(--y));
+    left:calc(100% * var(--mobile-x));
+    top:calc(100% * var(--mobile-y));
     transform:translate(-50%,-50%) translateY(-10px);
 }
 

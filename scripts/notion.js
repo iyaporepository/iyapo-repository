@@ -304,7 +304,6 @@ async function fetch_database(database_id,{sort_prop,include_content=false,archi
                     }
                     break;
                 default:
-                    console.log('in default',b.type)
                     properties[prop]=  {
                         type:b.type,
                         value:b[b.type]

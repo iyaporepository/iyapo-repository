@@ -117,7 +117,7 @@ landing: false
           <nav id="cluster-nav">
             {% for cluster in archive_clusters%}
               <a class='mono' 
-              style="--x:{{cluster.pos.x}}; --y:{{cluster.pos.y}};"  
+              style="--x:{{cluster.pos.x}}; --y:{{cluster.pos.y}}; --mobile-x:{{cluster.mobile_pos.x}}; --mobile-y:{{cluster.mobile_pos.y}};"  
               target="portal" 
               data-i="{{loop.index0}}" 
               data-name="{{cluster.name}}" 

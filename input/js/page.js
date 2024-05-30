@@ -28,14 +28,16 @@ let galaxy_settings={
         n1:7,
         n2:30,
         r1:0.015,
-        r2:0.1
+        r2:0.1,
+        pos_prop:'pos'
     },
     mobile:{
         n1:5,
         n2:15,
         r1:0.08,
-        r2:0.2
-    }
+        r2:0.32,
+        pos_prop:'mobile_pos'
+    },
 }
 
 
@@ -247,16 +249,19 @@ function distance(p0,p1){
     return Math.sqrt((p0.x - p1.x)**2 + (p0.y - p1.y)**2);
 }
 
-function generate_galaxy({n1=7,n2=30,r1=0.015,r2=0.1}){
+function generate_galaxy({n1=7,n2=30,r1=0.015,r2=0.1,pos_prop="pos"}){
     let points=[];
     let dims=win;
+
+    
 
 
     for(let cluster of archive_clusters){
         let radius=0.05;
+        let pos=cluster[pos_prop];
         let constraints={
-            x:[cluster.pos.x-radius,cluster.pos.x+radius],
-            y:[cluster.pos.y-radius,cluster.pos.y+radius]
+            x:[pos.x-radius,pos.x+radius],
+            y:[pos.y-radius,pos.y+radius]
         }
         for(let p=0;p<n1;p++){
             let point=poisson_point_place(points,dims,dims.w*r1,constraints);
