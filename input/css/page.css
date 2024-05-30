@@ -960,10 +960,7 @@ figure figcaption{
     cursor:copy;
 }
 
-.prose a{
-    color:var(--hl);
-    font-weight:400;
-}
+
 
 .prose h3{
     display:inline-block;
@@ -1008,10 +1005,10 @@ footer a:last-of-type{
 }
 
 
-footer a{
+.prose a,footer a{
     color:var(--hl);
+    font-weight:400;
 }
-
 
 @media(min-width:700px){
     .block>.img.vertical{

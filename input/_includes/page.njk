@@ -251,9 +251,13 @@ landing: false
 
 
   <footer class="mono">
-    <a href="https://twitter.com">twitter</a>|
+    {% for link in cms.footer_links %}
+      <a href="{{link.properties.url.value}}">{{link.properties.title.value}}</a>
+      {% if not loop.last%}<span class="desktop-only">|</span>{% endif %}
+    {% endfor %}
+    {# <a href="https://twitter.com">twitter</a>|
     <a href="https://instagram.com">instagram</a><span class='desktop-only'>|</span>
-    <a href="mailto:imagine@iyaporepository.org">imagine@iyaporepository.org</a>
+    <a href="mailto:imagine@iyaporepository.org">imagine@iyaporepository.org</a> #}
   </footer>
   </body>
 </html>

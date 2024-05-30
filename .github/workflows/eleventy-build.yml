@@ -22,7 +22,7 @@ jobs:
       - run: npm run build
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          BASE_URL: /iyapo-repository/
+          BASE_URL: /
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

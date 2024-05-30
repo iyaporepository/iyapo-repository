@@ -5,21 +5,15 @@ const process_images=require('./process-images.js');
 const slugify = require('slugify');
 require('dotenv').config();
 
-// let pages_database_id="98c44354161641b39e15bbb26816ad33";
-
 let databases=[
     {name: "manuscripts",id:"28f1f92314ac47fb8f89cd302a6f0a90",options:{archive_type:'manuscript'}},
     {name: "artifacts",id:"dd406cccfd91406f8207b62effb45912",options:{archive_type:'artifact'}},
     {name: "moving_images",id:"727d1748ea79447e9ef19b2b9f888baf",options:{archive_type:'moving-image'}},
     {name: "rare_media",id:"6e2fd89530c848b4acf99212c7ce32b7",options:{archive_type:'rare-media'}},
-    {name:"pages",id:"98c44354161641b39e15bbb26816ad33",options:{sort_prop:'nav_order',include_content:true}}
+    {name:"pages",id:"98c44354161641b39e15bbb26816ad33",options:{sort_prop:'nav_order',include_content:true}},
+    {name:"footer_links",id:"617f5af7592e4ad09c8f7df505b31e0c"}
 ]
 
-
-
-
-let manuscripts_database_id="28f1f92314ac47fb8f89cd302a6f0a90";
-let artifacts_database_id="dd406cccfd91406f8207b62effb45912";
 
 
 let secret=process.env.NOTION_TOKEN;
@@ -301,7 +295,16 @@ async function fetch_database(database_id,{sort_prop,include_content=false,archi
                         value:output_file_array
                     }
                     break;
+                case 'url':
+                    let urlval=b[b.type];
+                    if(!urlval.includes('http://')&&!urlval.includes('https://')&&!urlval.includes('mailto:')) urlval='https://'+urlval;
+                    properties[prop]=  {
+                        type:b.type,
+                        value:urlval
+                    }
+                    break;
                 default:
+                    console.log('in default',b.type)
                     properties[prop]=  {
                         type:b.type,
                         value:b[b.type]
