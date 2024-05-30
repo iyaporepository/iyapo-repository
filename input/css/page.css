@@ -912,18 +912,32 @@ figure figcaption{
     width:100%;
 } */
 
-
-
 .prose h2{
-    border-top:var(--stroke-width) solid var(--fg);
+    margin-top:50px;
+}
+
+.block.t-o-c a{
+    cursor:s-resize;
+}
+
+.prose h2,.prose>.block.t-o-c:first-child{
+    border-top:var(--border);
     padding-top:10px;
     text-transform:uppercase;
-    margin-top:50px;
 }
 
 
 .prose>.block.t-o-c:first-child{
+    border-bottom:var(--border);
+    padding-bottom:10px;
     text-align:center;
+    margin-top:30px;
+}
+
+.prose>.block.t-o-c:first-child + .block h2{
+    margin-top:0;
+    border-top:none;
+    padding-top:0;
 }
 
 /* .prose h2,.prose>.block:first-child>*{
