@@ -955,10 +955,10 @@ figure figcaption{
     scroll-margin-top:150px;
 }
 
-.prose h2:hover{
+/* .prose h2:hover{
     background-color: rgba(255,255,255,0.1);
     cursor:copy;
-}
+} */
 
 
 
@@ -1222,7 +1222,6 @@ footer a:last-of-type{
     #page-nav .expand-link:hover{
         background-color: var(--fg);
         color:var(--bg);
-        /* flex:2; */
     }
 
     body.landing:not(.scrolled) #archive-window.mousemoved:hover{
