@@ -469,10 +469,10 @@ function update_scope(){
         
         svg.aperture.attr('d',`M ${box.left} ${box.top} H ${box.right} V ${box.bot} H ${box.left} Z`)
         let back={
-            left:win.axis.x +  (box.left - win.axis.x) * -1 * 20,
-            right:win.axis.x + (box.right - win.axis.x) * -1 * 20,
-            top:win.axis.y + (box.top - win.axis.y) * -1 * 20,
-            bot:win.axis.y + (box.bot - win.axis.y) * -1 * 20
+            left:win.axis.x +  (box.left - win.axis.x) * -100,
+            right:win.axis.x + (box.right - win.axis.x) * -100,
+            top:win.axis.y + (box.top - win.axis.y) * -100,
+            bot:win.axis.y + (box.bot - win.axis.y) * -100
         }
     
     
