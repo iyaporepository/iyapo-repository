@@ -26,7 +26,7 @@
     
     <script>
         let cluster="manuscripts";
-        let tags={"narrative":["Dystopian","Utopian","Revolutionary","Apocalyptic"],"domain":["Security","Game","Music","Fashion","Environment","Politics","Space Travel","Food","Health","Education"],"object":["Self Defense","AI","Makes Sound","Sphere","Changes Color","Pumps Air","Tube","3D Printed","Transmits Data","Wearable","Has a Motor"]};
+        let tags={"narrative":["Utopian","Apocalyptic","Revolutionary","Dystopian"],"domain":["Food","Space Travel","Environment","Security","Game","Music","Fashion","Politics","Health","Education"],"object":["Pumps Air","Changes Color","Makes Sound","Self Defense","AI","Sphere","Tube","3D Printed","Transmits Data","Wearable","Has a Motor"]};
     </script>
     <script src="../../js/cluster.js" charset="utf-8"></script>
   
@@ -69,13 +69,13 @@
                             <p class='taglist-head'>Narrative:</p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Dystopian" type="checkbox" name="narrative-dystopian" id="narrative-dystopian">
-                                    <label data-tag="Dystopian" for="narrative-dystopian"><span class="col-narrative">Dystopian</span></label>
+                                    <input data-tag="Utopian" type="checkbox" name="narrative-utopian" id="narrative-utopian">
+                                    <label data-tag="Utopian" for="narrative-utopian"><span class="col-narrative">Utopian</span></label>
                                 </p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Utopian" type="checkbox" name="narrative-utopian" id="narrative-utopian">
-                                    <label data-tag="Utopian" for="narrative-utopian"><span class="col-narrative">Utopian</span></label>
+                                    <input data-tag="Apocalyptic" type="checkbox" name="narrative-apocalyptic" id="narrative-apocalyptic">
+                                    <label data-tag="Apocalyptic" for="narrative-apocalyptic"><span class="col-narrative">Apocalyptic</span></label>
                                 </p>
                             
                                 <p class="noselect tag-select">
@@ -84,8 +84,8 @@
                                 </p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Apocalyptic" type="checkbox" name="narrative-apocalyptic" id="narrative-apocalyptic">
-                                    <label data-tag="Apocalyptic" for="narrative-apocalyptic"><span class="col-narrative">Apocalyptic</span></label>
+                                    <input data-tag="Dystopian" type="checkbox" name="narrative-dystopian" id="narrative-dystopian">
+                                    <label data-tag="Dystopian" for="narrative-dystopian"><span class="col-narrative">Dystopian</span></label>
                                 </p>
                             
                         </div>
@@ -93,6 +93,21 @@
                     
                         <div class="taglist" data-category="object">
                             <p class='taglist-head'>Object:</p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Pumps Air" type="checkbox" name="object-pumps-air" id="object-pumps-air">
+                                    <label data-tag="Pumps Air" for="object-pumps-air"><span class="col-object">Pumps Air</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Changes Color" type="checkbox" name="object-changes-color" id="object-changes-color">
+                                    <label data-tag="Changes Color" for="object-changes-color"><span class="col-object">Changes Color</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Makes Sound" type="checkbox" name="object-makes-sound" id="object-makes-sound">
+                                    <label data-tag="Makes Sound" for="object-makes-sound"><span class="col-object">Makes Sound</span></label>
+                                </p>
                             
                                 <p class="noselect tag-select">
                                     <input data-tag="Self Defense" type="checkbox" name="object-self-defense" id="object-self-defense">
@@ -105,23 +120,8 @@
                                 </p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Makes Sound" type="checkbox" name="object-makes-sound" id="object-makes-sound">
-                                    <label data-tag="Makes Sound" for="object-makes-sound"><span class="col-object">Makes Sound</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
                                     <input data-tag="Sphere" type="checkbox" name="object-sphere" id="object-sphere">
                                     <label data-tag="Sphere" for="object-sphere"><span class="col-object">Sphere</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Changes Color" type="checkbox" name="object-changes-color" id="object-changes-color">
-                                    <label data-tag="Changes Color" for="object-changes-color"><span class="col-object">Changes Color</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Pumps Air" type="checkbox" name="object-pumps-air" id="object-pumps-air">
-                                    <label data-tag="Pumps Air" for="object-pumps-air"><span class="col-object">Pumps Air</span></label>
                                 </p>
                             
                                 <p class="noselect tag-select">
@@ -156,6 +156,21 @@
                             <p class='taglist-head'>Domain:</p>
                             
                                 <p class="noselect tag-select">
+                                    <input data-tag="Food" type="checkbox" name="domain-food" id="domain-food">
+                                    <label data-tag="Food" for="domain-food"><span class="col-domain">Food</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Space Travel" type="checkbox" name="domain-space-travel" id="domain-space-travel">
+                                    <label data-tag="Space Travel" for="domain-space-travel"><span class="col-domain">Space Travel</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Environment" type="checkbox" name="domain-environment" id="domain-environment">
+                                    <label data-tag="Environment" for="domain-environment"><span class="col-domain">Environment</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
                                     <input data-tag="Security" type="checkbox" name="domain-security" id="domain-security">
                                     <label data-tag="Security" for="domain-security"><span class="col-domain">Security</span></label>
                                 </p>
@@ -176,23 +191,8 @@
                                 </p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Environment" type="checkbox" name="domain-environment" id="domain-environment">
-                                    <label data-tag="Environment" for="domain-environment"><span class="col-domain">Environment</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
                                     <input data-tag="Politics" type="checkbox" name="domain-politics" id="domain-politics">
                                     <label data-tag="Politics" for="domain-politics"><span class="col-domain">Politics</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Space Travel" type="checkbox" name="domain-space-travel" id="domain-space-travel">
-                                    <label data-tag="Space Travel" for="domain-space-travel"><span class="col-domain">Space Travel</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Food" type="checkbox" name="domain-food" id="domain-food">
-                                    <label data-tag="Food" for="domain-food"><span class="col-domain">Food</span></label>
                                 </p>
                             
                                 <p class="noselect tag-select">
@@ -10137,10 +10137,10 @@ Chilra Diyar"
           
 
           <a 
-            data-narrative="" 
-            data-object="" 
-            data-domain="" 
-            data-name=""
+            data-narrative="Revolutionary" 
+            data-object="Makes Sound" 
+            data-domain="Environment" 
+            data-name="Eugene Rodriquez"
             data-id="0283"
             data-category=""
             class="item card vertical" 
@@ -10172,10 +10172,10 @@ Chilra Diyar"
           
 
           <a 
-            data-narrative="" 
-            data-object="" 
-            data-domain="" 
-            data-name=""
+            data-narrative="Apocalyptic" 
+            data-object="Changes Color" 
+            data-domain="Space Travel" 
+            data-name="B.  Gill"
             data-id="0284"
             data-category=""
             class="item card vertical" 
@@ -10242,10 +10242,10 @@ Chilra Diyar"
           
 
           <a 
-            data-narrative="" 
-            data-object="" 
-            data-domain="" 
-            data-name=""
+            data-narrative="Utopian" 
+            data-object="Pumps Air" 
+            data-domain="Food" 
+            data-name="Li Sumpter, Karen Milbourne, Eric Payne"
             data-id="0286"
             data-category=""
             class="item card vertical" 
