@@ -26,7 +26,7 @@
     
     <script>
         let cluster="manuscripts";
-        let tags={"narrative":["Utopian","Apocalyptic","Revolutionary","Dystopian"],"domain":["Food","Space Travel","Environment","Security","Game","Music","Fashion","Politics","Health","Education"],"object":["Pumps Air","Changes Color","Makes Sound","Self Defense","AI","Sphere","Tube","3D Printed","Transmits Data","Wearable","Has a Motor"]};
+        let tags={"narrative":["Revolutionary","Utopian","Apocalyptic","Dystopian"],"domain":["Food","Space Travel","Environment","Music","Health","Security","Game","Fashion","Politics","Education"],"object":["Transmits Data","Pumps Air","Changes Color","Makes Sound","Sphere","3D Printed","Tube","Self Defense","AI","Wearable","Has a Motor"]};
     </script>
     <script src="../../js/cluster.js" charset="utf-8"></script>
   
@@ -69,6 +69,11 @@
                             <p class='taglist-head'>Narrative:</p>
                             
                                 <p class="noselect tag-select">
+                                    <input data-tag="Revolutionary" type="checkbox" name="narrative-revolutionary" id="narrative-revolutionary">
+                                    <label data-tag="Revolutionary" for="narrative-revolutionary"><span class="col-narrative">Revolutionary</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
                                     <input data-tag="Utopian" type="checkbox" name="narrative-utopian" id="narrative-utopian">
                                     <label data-tag="Utopian" for="narrative-utopian"><span class="col-narrative">Utopian</span></label>
                                 </p>
@@ -76,11 +81,6 @@
                                 <p class="noselect tag-select">
                                     <input data-tag="Apocalyptic" type="checkbox" name="narrative-apocalyptic" id="narrative-apocalyptic">
                                     <label data-tag="Apocalyptic" for="narrative-apocalyptic"><span class="col-narrative">Apocalyptic</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Revolutionary" type="checkbox" name="narrative-revolutionary" id="narrative-revolutionary">
-                                    <label data-tag="Revolutionary" for="narrative-revolutionary"><span class="col-narrative">Revolutionary</span></label>
                                 </p>
                             
                                 <p class="noselect tag-select">
@@ -93,6 +93,11 @@
                     
                         <div class="taglist" data-category="object">
                             <p class='taglist-head'>Object:</p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Transmits Data" type="checkbox" name="object-transmits-data" id="object-transmits-data">
+                                    <label data-tag="Transmits Data" for="object-transmits-data"><span class="col-object">Transmits Data</span></label>
+                                </p>
                             
                                 <p class="noselect tag-select">
                                     <input data-tag="Pumps Air" type="checkbox" name="object-pumps-air" id="object-pumps-air">
@@ -110,23 +115,8 @@
                                 </p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Self Defense" type="checkbox" name="object-self-defense" id="object-self-defense">
-                                    <label data-tag="Self Defense" for="object-self-defense"><span class="col-object">Self Defense</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="AI" type="checkbox" name="object-ai" id="object-ai">
-                                    <label data-tag="AI" for="object-ai"><span class="col-object">AI</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
                                     <input data-tag="Sphere" type="checkbox" name="object-sphere" id="object-sphere">
                                     <label data-tag="Sphere" for="object-sphere"><span class="col-object">Sphere</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Tube" type="checkbox" name="object-tube" id="object-tube">
-                                    <label data-tag="Tube" for="object-tube"><span class="col-object">Tube</span></label>
                                 </p>
                             
                                 <p class="noselect tag-select">
@@ -135,8 +125,18 @@
                                 </p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Transmits Data" type="checkbox" name="object-transmits-data" id="object-transmits-data">
-                                    <label data-tag="Transmits Data" for="object-transmits-data"><span class="col-object">Transmits Data</span></label>
+                                    <input data-tag="Tube" type="checkbox" name="object-tube" id="object-tube">
+                                    <label data-tag="Tube" for="object-tube"><span class="col-object">Tube</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Self Defense" type="checkbox" name="object-self-defense" id="object-self-defense">
+                                    <label data-tag="Self Defense" for="object-self-defense"><span class="col-object">Self Defense</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="AI" type="checkbox" name="object-ai" id="object-ai">
+                                    <label data-tag="AI" for="object-ai"><span class="col-object">AI</span></label>
                                 </p>
                             
                                 <p class="noselect tag-select">
@@ -171,6 +171,16 @@
                                 </p>
                             
                                 <p class="noselect tag-select">
+                                    <input data-tag="Music" type="checkbox" name="domain-music" id="domain-music">
+                                    <label data-tag="Music" for="domain-music"><span class="col-domain">Music</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Health" type="checkbox" name="domain-health" id="domain-health">
+                                    <label data-tag="Health" for="domain-health"><span class="col-domain">Health</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
                                     <input data-tag="Security" type="checkbox" name="domain-security" id="domain-security">
                                     <label data-tag="Security" for="domain-security"><span class="col-domain">Security</span></label>
                                 </p>
@@ -181,11 +191,6 @@
                                 </p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Music" type="checkbox" name="domain-music" id="domain-music">
-                                    <label data-tag="Music" for="domain-music"><span class="col-domain">Music</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
                                     <input data-tag="Fashion" type="checkbox" name="domain-fashion" id="domain-fashion">
                                     <label data-tag="Fashion" for="domain-fashion"><span class="col-domain">Fashion</span></label>
                                 </p>
@@ -193,11 +198,6 @@
                                 <p class="noselect tag-select">
                                     <input data-tag="Politics" type="checkbox" name="domain-politics" id="domain-politics">
                                     <label data-tag="Politics" for="domain-politics"><span class="col-domain">Politics</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Health" type="checkbox" name="domain-health" id="domain-health">
-                                    <label data-tag="Health" for="domain-health"><span class="col-domain">Health</span></label>
                                 </p>
                             
                                 <p class="noselect tag-select">
@@ -9857,10 +9857,10 @@ Chilra Diyar"
           
 
           <a 
-            data-narrative="" 
-            data-object="" 
-            data-domain="" 
-            data-name=""
+            data-narrative="Apocalyptic" 
+            data-object="Self Defense" 
+            data-domain="Health" 
+            data-name="Li Sumpter, Karen Milbourne &amp; Eric Payne"
             data-id="0275"
             data-category=""
             class="item card vertical" 
@@ -9892,10 +9892,10 @@ Chilra Diyar"
           
 
           <a 
-            data-narrative="" 
-            data-object="" 
-            data-domain="" 
-            data-name=""
+            data-narrative="Dystopian" 
+            data-object="3D Printed" 
+            data-domain="Environment" 
+            data-name="Brandon Valerie"
             data-id="0276"
             data-category=""
             class="item card vertical" 
@@ -9927,10 +9927,10 @@ Chilra Diyar"
           
 
           <a 
-            data-narrative="" 
-            data-object="" 
-            data-domain="" 
-            data-name=""
+            data-narrative="Apocalyptic" 
+            data-object="Sphere" 
+            data-domain="Music" 
+            data-name="Del Gans"
             data-id="0277"
             data-category=""
             class="item card vertical" 
@@ -9962,10 +9962,10 @@ Chilra Diyar"
           
 
           <a 
-            data-narrative="" 
-            data-object="" 
-            data-domain="" 
-            data-name=""
+            data-narrative="Utopian" 
+            data-object="Tube" 
+            data-domain="Health" 
+            data-name="Catherine Chattergoon"
             data-id="0278"
             data-category=""
             class="item card vertical" 
@@ -9997,10 +9997,10 @@ Chilra Diyar"
           
 
           <a 
-            data-narrative="" 
-            data-object="" 
-            data-domain="" 
-            data-name=""
+            data-narrative="Utopian" 
+            data-object="Pumps Air" 
+            data-domain="Space Travel" 
+            data-name="A.    Churyy"
             data-id="0279"
             data-category=""
             class="item card vertical" 
@@ -10032,10 +10032,10 @@ Chilra Diyar"
           
 
           <a 
-            data-narrative="" 
-            data-object="" 
-            data-domain="" 
-            data-name=""
+            data-narrative="Dystopian" 
+            data-object="3D Printed" 
+            data-domain="Food" 
+            data-name="Karim Couser"
             data-id="0280"
             data-category=""
             class="item card vertical" 
@@ -10067,10 +10067,10 @@ Chilra Diyar"
           
 
           <a 
-            data-narrative="" 
-            data-object="" 
-            data-domain="" 
-            data-name=""
+            data-narrative="Revolutionary" 
+            data-object="Transmits Data" 
+            data-domain="Food" 
+            data-name="Bobbye Hall"
             data-id="0281"
             data-category=""
             class="item card vertical" 
@@ -10102,10 +10102,10 @@ Chilra Diyar"
           
 
           <a 
-            data-narrative="" 
-            data-object="" 
-            data-domain="" 
-            data-name=""
+            data-narrative="Revolutionary" 
+            data-object="Sphere" 
+            data-domain="Environment" 
+            data-name="Eugene Rodriquez"
             data-id="0282"
             data-category=""
             class="item card vertical" 
