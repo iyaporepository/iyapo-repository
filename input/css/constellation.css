@@ -18,6 +18,10 @@
     position:relative;
 }
 
+.media figure:last-of-type{
+    margin-bottom:0;
+}
+
 .media img,.media iframe{
     width:100%;
 }

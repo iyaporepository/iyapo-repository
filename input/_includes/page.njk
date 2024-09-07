@@ -28,8 +28,8 @@ landing: false
     <script type="module" src="{{ rootpath }}js/d3.js" charset="utf-8" preload></script>
     <script src="{{ rootpath }}js/page.js" charset="utf-8"></script>
     
-    <!-- favicon -->
-    {# {{ favicon.html() }} #}
+
+    {{ macros.favicon(rootpath) }}
 
     {% set homepage_content = cms.pages | notion_data_find("use_on_homepage",1) %}
   

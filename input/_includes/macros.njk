@@ -37,9 +37,7 @@
     </picture>
     {% if image.caption%}
         <figcaption class="mono small-caps">
-            {% for p in image.caption %}
-                <p>{{ p }}</p>
-            {% endfor %}
+            <p>{{ image.caption | md | safe }}</p>
         </figcaption>
     {% endif %}
     
@@ -83,14 +81,10 @@
 
 {% endmacro %}
 
-{# {% macro bevel_box({sides,corners}) %}
-<div class="bevel-box {{sides}}">
-    {% for corner in corners %}
-        <div class='corner {{corner}}'></div>
-    {% endfor %}
-</div>
+{% macro favicon(root="") %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{root}}assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{root}}assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{root}}assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="{{root}}assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="{{root}}assets/favicon/favicon.ico">
 {% endmacro %}
-
-{% macro test(msg) %}
-<div>{{msg}}</div>
-{% endmacro %} #}
