@@ -26,7 +26,7 @@
     
     <script>
         let cluster="manuscripts";
-        let tags={"narrative":["Revolutionary","Utopian","Apocalyptic","Dystopian"],"domain":["Food","Space Travel","Environment","Music","Health","Security","Game","Politics","Fashion","Education"],"object":["Transmits Data","Pumps Air","Changes Color","Makes Sound","Sphere","3D Printed","Tube","Self Defense","AI","Wearable","Has a Motor"]};
+        let tags={"narrative":["Revolutionary","Utopian","Apocalyptic","Dystopian"],"domain":["Food","Health","Security","Politics","Music","Environment","Education","Space Travel","Fashion","Game"],"object":["Transmits Data","Makes Sound","Wearable","Sphere","Pumps Air","Has a Motor","AI","Changes Color","Tube","3D Printed","Self Defense"]};
     </script>
     <script src="../../js/cluster.js" charset="utf-8"></script>
   
@@ -100,43 +100,8 @@
                                 </p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Pumps Air" type="checkbox" name="object-pumps-air" id="object-pumps-air">
-                                    <label data-tag="Pumps Air" for="object-pumps-air"><span class="col-object">Pumps Air</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Changes Color" type="checkbox" name="object-changes-color" id="object-changes-color">
-                                    <label data-tag="Changes Color" for="object-changes-color"><span class="col-object">Changes Color</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
                                     <input data-tag="Makes Sound" type="checkbox" name="object-makes-sound" id="object-makes-sound">
                                     <label data-tag="Makes Sound" for="object-makes-sound"><span class="col-object">Makes Sound</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Sphere" type="checkbox" name="object-sphere" id="object-sphere">
-                                    <label data-tag="Sphere" for="object-sphere"><span class="col-object">Sphere</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="3D Printed" type="checkbox" name="object-3d-printed" id="object-3d-printed">
-                                    <label data-tag="3D Printed" for="object-3d-printed"><span class="col-object">3D Printed</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Tube" type="checkbox" name="object-tube" id="object-tube">
-                                    <label data-tag="Tube" for="object-tube"><span class="col-object">Tube</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Self Defense" type="checkbox" name="object-self-defense" id="object-self-defense">
-                                    <label data-tag="Self Defense" for="object-self-defense"><span class="col-object">Self Defense</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="AI" type="checkbox" name="object-ai" id="object-ai">
-                                    <label data-tag="AI" for="object-ai"><span class="col-object">AI</span></label>
                                 </p>
                             
                                 <p class="noselect tag-select">
@@ -145,8 +110,43 @@
                                 </p>
                             
                                 <p class="noselect tag-select">
+                                    <input data-tag="Sphere" type="checkbox" name="object-sphere" id="object-sphere">
+                                    <label data-tag="Sphere" for="object-sphere"><span class="col-object">Sphere</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Pumps Air" type="checkbox" name="object-pumps-air" id="object-pumps-air">
+                                    <label data-tag="Pumps Air" for="object-pumps-air"><span class="col-object">Pumps Air</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
                                     <input data-tag="Has a Motor" type="checkbox" name="object-has-a-motor" id="object-has-a-motor">
                                     <label data-tag="Has a Motor" for="object-has-a-motor"><span class="col-object">Has a Motor</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="AI" type="checkbox" name="object-ai" id="object-ai">
+                                    <label data-tag="AI" for="object-ai"><span class="col-object">AI</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Changes Color" type="checkbox" name="object-changes-color" id="object-changes-color">
+                                    <label data-tag="Changes Color" for="object-changes-color"><span class="col-object">Changes Color</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Tube" type="checkbox" name="object-tube" id="object-tube">
+                                    <label data-tag="Tube" for="object-tube"><span class="col-object">Tube</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="3D Printed" type="checkbox" name="object-3d-printed" id="object-3d-printed">
+                                    <label data-tag="3D Printed" for="object-3d-printed"><span class="col-object">3D Printed</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Self Defense" type="checkbox" name="object-self-defense" id="object-self-defense">
+                                    <label data-tag="Self Defense" for="object-self-defense"><span class="col-object">Self Defense</span></label>
                                 </p>
                             
                         </div>
@@ -161,21 +161,6 @@
                                 </p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Space Travel" type="checkbox" name="domain-space-travel" id="domain-space-travel">
-                                    <label data-tag="Space Travel" for="domain-space-travel"><span class="col-domain">Space Travel</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Environment" type="checkbox" name="domain-environment" id="domain-environment">
-                                    <label data-tag="Environment" for="domain-environment"><span class="col-domain">Environment</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
-                                    <input data-tag="Music" type="checkbox" name="domain-music" id="domain-music">
-                                    <label data-tag="Music" for="domain-music"><span class="col-domain">Music</span></label>
-                                </p>
-                            
-                                <p class="noselect tag-select">
                                     <input data-tag="Health" type="checkbox" name="domain-health" id="domain-health">
                                     <label data-tag="Health" for="domain-health"><span class="col-domain">Health</span></label>
                                 </p>
@@ -186,13 +171,28 @@
                                 </p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Game" type="checkbox" name="domain-game" id="domain-game">
-                                    <label data-tag="Game" for="domain-game"><span class="col-domain">Game</span></label>
+                                    <input data-tag="Politics" type="checkbox" name="domain-politics" id="domain-politics">
+                                    <label data-tag="Politics" for="domain-politics"><span class="col-domain">Politics</span></label>
                                 </p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Politics" type="checkbox" name="domain-politics" id="domain-politics">
-                                    <label data-tag="Politics" for="domain-politics"><span class="col-domain">Politics</span></label>
+                                    <input data-tag="Music" type="checkbox" name="domain-music" id="domain-music">
+                                    <label data-tag="Music" for="domain-music"><span class="col-domain">Music</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Environment" type="checkbox" name="domain-environment" id="domain-environment">
+                                    <label data-tag="Environment" for="domain-environment"><span class="col-domain">Environment</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Education" type="checkbox" name="domain-education" id="domain-education">
+                                    <label data-tag="Education" for="domain-education"><span class="col-domain">Education</span></label>
+                                </p>
+                            
+                                <p class="noselect tag-select">
+                                    <input data-tag="Space Travel" type="checkbox" name="domain-space-travel" id="domain-space-travel">
+                                    <label data-tag="Space Travel" for="domain-space-travel"><span class="col-domain">Space Travel</span></label>
                                 </p>
                             
                                 <p class="noselect tag-select">
@@ -201,8 +201,8 @@
                                 </p>
                             
                                 <p class="noselect tag-select">
-                                    <input data-tag="Education" type="checkbox" name="domain-education" id="domain-education">
-                                    <label data-tag="Education" for="domain-education"><span class="col-domain">Education</span></label>
+                                    <input data-tag="Game" type="checkbox" name="domain-game" id="domain-game">
+                                    <label data-tag="Game" for="domain-game"><span class="col-domain">Game</span></label>
                                 </p>
                             
                         </div>
