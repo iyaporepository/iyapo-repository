@@ -1,0 +1,48 @@
+
+<!-- absolute -->
+<svg width="343" height="97" viewBox="0 0 343 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- aperture back (logo front )-->
+<path d="M342 51.6699L162.644 62.4212" stroke="#F8F8F8" stroke-linejoin="round"/>
+<path d="M158.67,57.0462L331.821,32.4727" stroke="#F8F8F8" stroke-linejoin="round"/>
+<path d="M158.67,46.3901L328.628,1" stroke="#F8F8F8" stroke-linejoin="round"/>
+
+<!-- aperture (logo back ) -->
+<path d="M128.74 68.752L22.0049 95.9806" stroke="#F8F8F8" stroke-linejoin="round"/>
+<path d="M128.925,59.7129L1,87.8851" stroke="#F8F8F8" stroke-linejoin="round"/>
+<path d="M129.016,50.6816L5.28711,59.7136" stroke="#F8F8F8" stroke-linejoin="round"/>
+
+<!-- ship -->
+<path d="M22.0117 96.0176L0.990234 87.8712L5.30542 59.7285" stroke="#F8F8F8" stroke-linecap="round"/>
+<path d="M165.824 93.5L135.999 75H129L158.825 93.5H165.824Z" stroke="#F8F8F8" stroke-linejoin="round"/>
+<path d="M338.208 18.617L342 51.671L331.822 32.4731L328.629 1L338.208 18.617Z" stroke="#F8F8F8" stroke-linejoin="round"/>
+<path d="M165.825 28.5052V44.4805L158.663 46.3882V57.0321L162.646 62.4226L165.82 62.2383V93.5014L136 75.002V10L165.825 28.5052Z" stroke="#F8F8F8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+
+<!-- relative -->
+<svg width="343" height="97" viewBox="0 0 343 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<!-- aperture back (logo front )-->
+<!-- right bottom -->
+<path d="m 162.644 62.4212 l 179.356 -10.7513" stroke="#F8F8F8" stroke-linejoin="round"/>
+<!-- left bottom -->
+<path d="m 158.67 57.0462 l 173.151 -24.5735" stroke="#F8F8F8" stroke-linejoin="round"/>
+<!-- left top -->
+<path d="m 158.67 46.3901 l 169.958 -45.3901" stroke="#F8F8F8" stroke-linejoin="round"/>
+
+<!-- aperture (logo back ) -->
+<!-- bottom right -->
+<path d="m 128.74 68.752 l -106.7351 27.2286" stroke="#F8F8F8" stroke-linejoin="round"/>
+<!-- bottom left -->
+<path d="m 128.925 59.7129 l -127.925 28.1722" stroke="#F8F8F8" stroke-linejoin="round"/>
+<!-- top left -->
+<path d="m 129.016 50.6816 l -123.7289 9.032" stroke="#F8F8F8" stroke-linejoin="round"/>
+
+<!-- ship -->
+<path d="m 22.0117 96.0176 l -21.0215 -8.1464 l 4.3152 -28.1427" stroke="#F8F8F8" stroke-linecap="round"/>
+<path d="m 165.824 93.5 l -29.825 -18.5 h -6.999 l 29.825 18.5 h 6.999 z" stroke="#F8F8F8" stroke-linejoin="round"/>
+<path d="m 338.208 18.617 l 3.792 33.054 l -10.178 -19.1979 l -3.193 -31.4731 l 9.579 17.617 z" stroke="#F8F8F8" stroke-linejoin="round"/>
+<path d="m 165.825 28.5052 v 15.9753 l -7.162 1.9077 v 10.6439 l 3.983 5.3905 l 3.174 -0.1843 v 31.2631 l -29.82 -18.4994 v -65.002 l 29.825 18.5052 z" stroke="#F8F8F8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+
